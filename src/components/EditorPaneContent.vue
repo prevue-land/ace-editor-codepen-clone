@@ -19,14 +19,7 @@ const langLabelClass = `lang-${props.editorLang}`;
     <span>{{ humanisedLabelText }}</span>
   </div>
   <div class="editor-container">
-    <Suspense>
-      <template #default>
-        <CodeEditor :lang="props.editorLang" />
-      </template>
-      <template #fallback>
-        <span>Loading...</span>
-      </template>
-    </Suspense>
+    <CodeEditor :lang="props.editorLang" />
   </div>
 </template>
 

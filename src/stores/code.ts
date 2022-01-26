@@ -35,11 +35,15 @@ export const useCodeStore = defineStore<'code', State, Getters, Actions>(
           <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <style>${this.css}</style>
+            <style>
+            ${this.css}
+            </style>
           </head>
           <body>
             ${this.html}
-            <script>${this.javascript}</script>
+            <script>
+            ${this.javascript}
+            </script>
           </body>
         </html>        
         `;
