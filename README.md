@@ -1,6 +1,8 @@
 # ace-editor-codepen-clone
 
-This template should help get you started developing with Vue 3 in Vite.
+Complete code for Weekly OverVue's [Create a simple CodePen clone using vue3-ace-editor and splitpanes](https://weeklyovervue.com/articles/codepen-clone) tutorial.
+
+Live demo: [https://wov-codepen-clone.netlify.app](https://wov-codepen-clone.netlify.app)
 
 ## Recommended IDE Setup
 
