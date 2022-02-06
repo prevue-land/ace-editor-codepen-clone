@@ -4,7 +4,11 @@ const currentYear = new Date().getFullYear();
 
 <template>
   <footer>
-    <p>&copy; {{ currentYear }} Weekly OverVue. Released under MIT License</p>
+    <p>
+      &copy; {{ currentYear }} Weekly OverVue. This project uses
+      <a href="https://github.com/antoniandre/splitpanes">splitpanes</a> and
+      <a href="https://github.com/CarterLi/vue3-ace-editor">vue3-ace-editor</a>
+    </p>
   </footer>
 </template>
 
@@ -13,5 +17,13 @@ footer {
   background-color: #42b883;
   color: #000;
   text-align: center;
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #444;
 }
 </style>

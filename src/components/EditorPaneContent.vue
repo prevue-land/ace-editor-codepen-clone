@@ -3,15 +3,15 @@ import { CodeEditorLanguage } from '@/types/CodeEditorLanguage';
 
 import CodeEditor from './CodeEditor.vue';
 
-const props = defineProps<{ editorLang: CodeEditorLanguage }>();
+const props = defineProps<{ lang: CodeEditorLanguage }>();
 
 const langToLabelMap = {
   html: 'HTML',
   css: 'CSS',
   javascript: 'JavaScript'
 };
-const humanisedLabelText = langToLabelMap[props.editorLang];
-const langLabelClass = `lang-${props.editorLang}`;
+const humanisedLabelText = langToLabelMap[props.lang];
+const langLabelClass = `lang-${props.lang}`;
 </script>
 
 <template>
@@ -19,16 +19,13 @@ const langLabelClass = `lang-${props.editorLang}`;
     <span>{{ humanisedLabelText }}</span>
   </div>
   <div class="editor-container">
-    <CodeEditor :lang="props.editorLang" />
+    <CodeEditor :lang="props.lang" />
   </div>
 </template>
 
 <style scoped>
 .editor-container {
   flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .editor-label {

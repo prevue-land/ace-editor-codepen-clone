@@ -11,12 +11,6 @@ const props = defineProps<{ lang: CodeEditorLanguage }>();
 const codeStore = useCodeStore();
 const editorContent = codeStore[props.lang];
 
-const aceEditorOptions: Partial<Ace.EditorOptions> = {
-  useWorker: true,
-  fontSize: 18,
-  tabSize: 2
-};
-
 const langToActionNameMap = {
   html: 'setHtml',
   css: 'setCss',
@@ -25,11 +19,16 @@ const langToActionNameMap = {
 
 const action = langToActionNameMap[props.lang] as keyof Actions;
 const updateCode = debounce(codeStore[action], 500);
+
+const aceEditorOptions: Partial<Ace.EditorOptions> = {
+  useWorker: true,
+  fontSize: 18,
+  tabSize: 2
+};
 </script>
 
 <template>
   <VAceEditor
-    style="width: 100%; height: 100%"
     theme="tomorrow"
     :lang="props.lang"
     :options="aceEditorOptions"
@@ -37,3 +36,10 @@ const updateCode = debounce(codeStore[action], 500);
     @update:value="updateCode"
   />
 </template>
+
+<style scoped>
+.ace_editor {
+  width: 100%;
+  height: 100%;
+}
+</style>

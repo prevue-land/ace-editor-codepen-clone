@@ -10,13 +10,13 @@ import PageFooter from './components/PageFooter.vue';
     <Pane>
       <Splitpanes id="editor-splitpanes">
         <Pane>
-          <EditorPaneContent editor-lang="html" />
+          <EditorPaneContent lang="html" />
         </Pane>
         <Pane>
-          <EditorPaneContent editor-lang="css" />
+          <EditorPaneContent lang="css" />
         </Pane>
         <Pane>
-          <EditorPaneContent editor-lang="javascript" />
+          <EditorPaneContent lang="javascript" />
         </Pane>
       </Splitpanes>
     </Pane>
@@ -39,14 +39,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
 }
 
 #app,
 .splitpanes__pane {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
 }
 
 #main-splitpanes > .splitpanes__splitter,
