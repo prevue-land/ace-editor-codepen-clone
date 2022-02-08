@@ -1,6 +1,6 @@
 # ace-editor-codepen-clone
 
-Complete code for Weekly OverVue's [Create a simple CodePen clone using vue3-ace-editor and splitpanes](https://weeklyovervue.com/articles/codepen-clone) tutorial.
+Complete code for Weekly OverVue's [Create a simple CodePen clone using vue3-ace-editor and splitpanes](https://weeklyovervue.hashnode.dev/ace-editor-codepen-clone) tutorial.
 
 Live demo: [https://wov-codepen-clone.netlify.app](https://wov-codepen-clone.netlify.app)
 
